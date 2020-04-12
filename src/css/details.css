@@ -1,0 +1,67 @@
+footer{
+    padding-left: 600px;
+}
+#maindetails{
+    width: 1300px;
+    position: relative;
+    border: solid;
+    border-radius: 5px;
+    margin-top: 70px;
+    margin-left: 100px;
+}
+#maintitle{ 
+    border-bottom: solid;
+    background-color: rgb(241, 236, 227);
+    padding-left: 30px;
+}
+#imagetitle{
+    text-align: center;
+    padding-top: 30px;
+}
+#imagetitle span{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#image{
+    padding-top: 40px;
+    padding-left: 80px;
+}
+#maindiv{
+    margin-top: 60px;
+    height: 400px;
+}
+#detailinfo{
+    float: right;
+    padding-right: 100px;
+}
+table{
+    border: solid;
+    width: 400px;
+}
+table tr td{
+    border: solid;
+}
+
+#liketable{
+    margin-top: 40px;
+}
+#detailtable{
+    margin-top:20px;
+}
+.titletd{
+    background-color: wheat;
+    font-weight: bold;
+}
+#likeimage{
+    float: right;
+    padding-top: 10px;
+}
+#likeimage img{
+    width: 400px;
+}
+p{
+    text-indent: 2em;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+}

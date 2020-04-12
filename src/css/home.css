@@ -1,0 +1,54 @@
+#homeli{
+    background-color: rgb(122, 120, 120);
+}
+#mainimage img{
+    width: 1400px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+#body{
+    padding-left: 20px;
+}
+table{
+    margin-left: 80px;
+    border-spacing: 30px;
+}
+td{
+    background-color: wheat;
+    width: 360px;
+    height: 500px;
+    border: solid 3px;
+    border-radius: 50px;
+    padding-left: 30px;
+}
+#goToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+}
+#goToTop img{
+    width: 30px;
+    margin-right: 0px;
+    margin-bottom: 80px;
+}
+#refresh{
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+}
+#refresh img{
+    width: 30px;
+}
+p{
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;/*显示3行文字*/
+    text-overflow: ellipsis;
+    font-size: 16px;
+    max-height: 300px;
+    overflow: hidden;
+}
+footer{
+    padding-left: 610px; 
+    color: black;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/upload.css">
+    <script>
+        function showMyImage(fileInput) {
+            var files = fileInput.files;
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var imageType = /image.*/;
+                if (!file.type.match(imageType)) {
+                    continue;
+                }
+                var img = document.getElementById("output");
+                img.file = file;
+                var reader = new FileReader();
+                reader.onload = (function(aImg) {
+                    return function(e) {
+                        aImg.src = e.target.result;
+                    };
+                })(img);
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="logo"><a href="home.html"><img id="homelogo" src="../img/logo/logo2.jfif"></a></div>
+        <div id="headerleft">
+            <ul>
+                <li id="homeli"><a href="home.html"><strong>主页</strong></a></li>
+                <li id="browserli"><a href="browser.html"><strong>浏览页</strong></a></li>
+                <li id="searchli"><a href="search.html"><strong>搜索页</strong></a></li>
+            </ul>
+        </div>
+        <div id="headerright">
+            <ul>
+                <li>
+                    <span><strong>个人中心</strong></span>
+                    <ul>
+                        <a href="upload.html"><li><strong><img class="smalllogo" src="../img/home/upload.jfif"> 上传</strong></li></a>
+                        <a href="myphoto.html"><li><strong><img class="smalllogo" src="../img/home/myphoto.jfif"> 我的照片</strong></li></a>
+                        <a href="favor.html"><li><strong><img class="smalllogo" src="../img/home/favor.jpg"> 我的收藏</strong></li></a>
+                        <a href="../index.html"><li><strong><img class="smalllogo" src="../img/home/login.jfif"> 登入</strong></li></a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="maindiv">
+        <h3 id="title">Upload</h3>
+        <div id="contain">
+            <div class="upload">
+                <img id="output" alt="图片未上传"><br>
+                <input type="file" accept="image/*" onchange="showMyImage(this)">
+            </div>
+            <div id="formdiv">
+                <p>图片标题: <br>
+                <input class="textinput" type="text"></p>
+                <p>图片描述：<br>
+                <textarea cols="164" rows="10"></textarea></p>
+                <p>拍摄国家：<br>
+                <input class="textinput" type="text"><br></p>
+                <p>拍摄城市：<br>
+                <input class="textinput" type="text"><br></p>
+                <div onclick="alert('图⽚已提交')"><a href="details.html"><input class="button" type="button" value="提交"></a></div>
+            </div>
+        </div>
+    </div>
+    <footer>&copy;19302010045@fudan.edu.cn</footer>
+</body>
+</html>

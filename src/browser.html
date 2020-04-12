@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/browser.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+        var proData = {
+            "China": ["Shanghai", "Kunming", "Beijing", "Yantai"],
+            "Japan": ["Tokyo", "Osaka", "Kamakura"],
+            "Italy": ["Roma", "Milan", "Venice", "Florence"],
+            "America": ["New York", "San Francisco", "Washington"]
+        };
+
+        window.onload = function() {
+            var oSelectPro = document.getElementById('Country');
+            var oSelectCity = document.getElementById('city');
+
+            oSelectPro.onchange = function() {
+                //获取当前选中的标签值
+                var aRrayCity = proData[this.value];
+                //选择后清空option
+                oSelectCity.options.length = 0;
+                for (var i = 0; i < aRrayCity.length; i++) {
+                    var oOption = document.createElement('option');
+                    oOption.innerHTML = aRrayCity[i];
+                    oOption.value = aRrayCity[i];
+                    oSelectCity.appendChild(oOption)
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="logo"><a href="home.html"><img id="homelogo" src="../img/logo/logo2.jfif"></a></div>
+        <div id="headerleft">
+            <ul>
+                <li id="homeli"><a href="home.html"><strong>主页</strong></a></li>
+                <li id="browserli"><a href="browser.html"><strong>浏览页</strong></a></li>
+                <li id="searchli"><a href="search.html"><strong>搜索页</strong></a></li>
+            </ul>
+        </div>
+        <div id="headerright">
+            <ul>
+                <li>
+                    <span><strong>个人中心</strong></span>
+                    <ul>
+                        <a href="upload.html"><li><strong><img class="smalllogo" src="../img/home/upload.jfif"> 上传</strong></li></a>
+                        <a href="myphoto.html"><li><strong><img class="smalllogo" src="../img/home/myphoto.jfif"> 我的照片</strong></li></a>
+                        <a href="favor.html"><li><strong><img class="smalllogo" src="../img/home/favor.jpg"> 我的收藏</strong></li></a>
+                        <a href="../index.html"><li><strong><img class="smalllogo" src="../img/home/login.jfif"> 登入</strong></li></a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="contain">
+        <div id="tablerow">
+            <div id="side">
+                <div id="searchdiv">
+                    <h4>Search by Title</h4>
+                    <input type="text"><a href=""><img src="../img/search/searchlogo.jpg" onclick="alert('搜索成功')"></a>
+                </div>
+                <div id="hotcontent">
+                    <h4>Hot Content</h4>
+                    <div onclick="alert('搜索成功')"><a href="">Scenery</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">City</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">People</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">Animal</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">Building</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">Wonder</a></div>
+                </div>
+                <div id="hotcountry">
+                    <h4>Hot Country</h4>
+                    <div onclick="alert('搜索成功')"><a href="">China</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">Italy</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">Japan</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">America</a></div>
+                </div>
+                <div id="hotcountry">
+                    <h4>Hot Country</h4>
+                    <div onclick="alert('搜索成功')"><a href="">Shanghai</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">Beijing</a></div><br>
+                    <div onclick="alert('搜索成功')"><a href="">Qingdao</a></div>
+                </div>
+            </div>
+            <div id="main">
+                <div id="require">
+                    <h4>筛选</h4>
+                    <div class="browser-tool">
+                        <select>
+                            <option>请选择</option>
+                            <option value="">Scenery</option>
+                            <option value="">City</option>
+                            <option value="">People</option>
+                            <option value="">Animal</option>
+                            <option value="">Building</option>
+                            <option value="">Wonder</option>
+                        </select>
+                        <select id="Country">
+                            <option>请选择</option>
+                            <option value="China">China</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Italy">Italy</option>
+                            <option value="America">America</option>
+                        </select>
+                        <select id="city">
+                        </select>    
+                    </div>
+                    <input id="button" type="button" value="筛选">
+                </div>
+                <div>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a><br>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a><br>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a><br>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                    <a href="details.html"><img src="../img/favor/favor2.jpg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>&copy;19302010045@fudan.edu.cn</footer>
+</body>
+</html>
