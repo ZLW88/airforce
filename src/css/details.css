@@ -6,13 +6,11 @@ footer{
     position: relative;
     border: solid;
     border-radius: 5px;
-    margin-top: 70px;
+    margin-top: 200px;
     margin-left: 100px;
 }
 #maintitle{ 
     border-bottom: solid;
-    background-color: rgb(241, 236, 227);
-    padding-left: 30px;
 }
 #imagetitle{
     text-align: center;
